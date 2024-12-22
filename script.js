@@ -662,9 +662,9 @@ function gtl(x, y) {
 }
 
 gtl(btn6, "https://github.com/Ankan-Pal");
-gtl(btn7, "https://discord.com/users/1152211104878043148");
-gtl(btn9, "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHGhjFq6kNFMAAAAZPspJ-A513FWjlhQJCnTtOjH8Rtp5na6NSR8iDlyh-9CsHK8giTN4d1FrnY7FjFMhhXuHtL4SS7pzfczymEqdOooLPrhb54ouhJw_g2FeSV5DsK2Hust6M=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fankan-pal-00aa50315%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app");
-gtl(btn8, "https://x.com/ankanpal224");
+gtl(btn9, "https://discord.com/users/1152211104878043148");
+gtl(btn8, "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHGhjFq6kNFMAAAAZPspJ-A513FWjlhQJCnTtOjH8Rtp5na6NSR8iDlyh-9CsHK8giTN4d1FrnY7FjFMhhXuHtL4SS7pzfczymEqdOooLPrhb54ouhJw_g2FeSV5DsK2Hust6M=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fankan-pal-00aa50315%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app");
+gtl(btn7, "https://x.com/ankanpal224");
 gtl(btn10, "https://ankanpaltodolist.netlify.app/");
 gtl(btn11, "https://papaya-puppy-1dc650.netlify.app/");
 gtl(btn12, "https://conunit224.netlify.app/");
