@@ -1,0 +1,671 @@
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const btn3 = document.getElementById("btn3");
+const btn4 = document.getElementById("btn4");
+const btn5 = document.getElementById("btn5");
+const btn6 = document.getElementById("btn6");
+const btn7 = document.getElementById("btn7");
+const btn8 = document.getElementById("btn8");
+const btn9 = document.getElementById("btn9");
+const btn10 = document.getElementById("btn10");
+const btn11 = document.getElementById("btn11");
+const btn12 = document.getElementById("btn12");
+const btn13 = document.getElementById("btn13");
+const btn14 = document.getElementById("btn14");
+const btn15 = document.getElementById("btn15");
+const btn16 = document.getElementById("btn16");
+
+const sign1 = document.getElementById("sign1");
+const sign2 = document.getElementById("sign2");
+const sign3 = document.getElementById("sign3");
+const sign4 = document.getElementById("sign4");
+
+const home = document.getElementById("home");
+const works = document.getElementById("works");
+const info = document.getElementById("info1");
+
+const img1 = document.getElementById("img1");
+const img2 = document.getElementById("img2");
+const img3 = document.getElementById("img3");
+const img4 = document.getElementById("img4");
+const img5 = document.getElementById("img5");
+const img6 = document.getElementById("img6");
+const img7 = document.getElementById("img7");
+const img8 = document.getElementById("img8");
+const img9 = document.getElementById("img9");
+const img10 = document.getElementById("img10");
+const img11 = document.getElementById("img11");
+const img12 = document.getElementById("img12");
+const img13 = document.getElementById("img13");
+const img14 = document.getElementById("img14");
+const img15 = document.getElementById("img15");
+const img16 = document.getElementById("img16");
+
+const h1img = document.getElementById("h1img");
+const h2img = document.getElementById("h2img");
+const h3img = document.getElementById("h3img");
+
+const s1 = document.getElementById("s1");
+const s2 = document.getElementById("s2");
+const s3 = document.getElementById("s3");
+
+
+const w1 = document.getElementById("w1");
+const w2 = document.getElementById("w2");
+const w3 = document.getElementById("w3");
+const w4 = document.getElementById("w4");
+const w5 = document.getElementById("w5");
+
+const h1 = document.getElementById("h1");
+const h2 = document.getElementById("h2");
+const h3 = document.getElementById("h3");
+
+const txt1 = document.getElementById("txt1");
+const txt2 = document.getElementById("txt2");
+const txt3 = document.getElementById("txt3");
+const txt5 = document.getElementById("txt5");
+const txt11 = document.getElementById("txt11");
+const txt12 = document.getElementById("txt12");
+const txt13 = document.getElementById("txt13");
+const txt21 = document.getElementById("txt21");
+const txt22 = document.getElementById("txt22");
+const txt23 = document.getElementById("txt23");
+const txt24 = document.getElementById("txt24");
+const txt25 = document.getElementById("txt25");
+const txt26 = document.getElementById("txt26");
+
+
+sign1.style.transition = "0.3s";
+document.body.style.userSelect = 'none';
+
+let h1c = 0;
+let h2c = 0;
+let h3c = 0;
+
+
+const audio = new Audio('images/se2.mp3');
+let sw = window.innerWidth;
+
+btn4.style.opacity = "0";
+btn5.style.opacity = "0";
+txt3.style.opacity = "0";
+sign2.style.opacity = "0";
+txt5.style.opacity = "0";
+img6.style.opacity = "0";
+
+setTimeout(() => {
+    txt1.style.transition = "0.5s";
+    txt2.style.transition = "0.5s";
+    btn4.style.transition = "0.5s";
+    btn5.style.transition = "0.5s";
+    txt3.style.transition = "0.5s";
+    sign2.style.transition = "0.5s";
+    txt11.style.transition = "0.5s";
+    txt12.style.transition = "0.5s";
+    txt13.style.transition = "0.5s";
+
+    txt1.style.opacity = "1";
+    setTimeout(() => {
+        txt2.style.opacity = "1";
+
+        setTimeout(() => {
+            btn4.style.opacity = "1";
+            btn5.style.opacity = "1";
+
+            setTimeout(() => {
+                txt3.style.opacity = "1";
+
+                setTimeout(() => {
+                    sign2.style.opacity = "1";
+                    setTimeout(() => {
+                        txt5.style.opacity = "1";
+                    }, 100);
+
+                }, 100);
+
+            }, 300);
+
+        }, 300);
+
+    }, 300);
+
+}, 400);
+btn3.addEventListener('click', () => {
+    setTimeout(() => {
+        img6.style.transition = "0.3s";
+        txt11.style.transition = "0.3s";
+        txt12.style.transition = "0.3s";
+        txt13.style.transition = "0.3s";
+        img6.style.opacity = "1";
+
+        setTimeout(() => {
+            txt11.style.opacity = "1";
+            setTimeout(() => {
+                txt12.style.opacity = "1";
+                setTimeout(() => {
+                    txt13.style.opacity = "1";
+                }, 200);
+            }, 200);
+        }, 200);
+    }, 100);
+});
+
+
+btn1.addEventListener('click', () => {
+    audio.play();
+    sign1.style.width = "100px";
+    sign1.style.marginLeft = "0px";
+
+    home.style.display = "flex";
+    works.style.display = "flex";
+    info.style.display = "none";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    setTimeout(() => {
+        audio.pause();
+    }, 500);
+
+});
+btn2.addEventListener('click', () => {
+    audio.play();
+    sign1.style.width = "100px";
+    sign1.style.marginLeft = "86px";
+
+    home.style.display = "flex";
+    works.style.display = "flex";
+    info.style.display = "none";
+
+    window.scrollTo({
+        top: 570,
+        behavior: "smooth"
+    });
+    setTimeout(() => {
+        audio.pause();
+    }, 500);
+});
+
+btn3.addEventListener('click', () => {
+
+    let is1ml = sign1.style.marginLeft;
+    if (is1ml != "178px") {
+        window.scrollTo(
+            {
+                top: 0,
+                behavior: "instant"
+            })
+    }
+    audio.play();
+    sign1.style.width = "75px";
+    sign1.style.marginLeft = "178px";
+
+    home.style.display = "none";
+    works.style.display = "none";
+    info.style.display = "block";
+    window.scrollTo(
+        {
+            top: 0,
+            behavior: "smooth"
+        }
+    )
+
+
+});
+btn4.addEventListener('click', () => {
+    audio.play();
+    sign1.style.width = "100px";
+    sign1.style.marginLeft = "86px";
+
+    home.style.display = "flex";
+    works.style.display = "flex";
+    info.style.display = "none";
+
+    window.scrollTo({
+        top: 570,
+        behavior: "smooth"
+    });
+    setTimeout(() => {
+        audio.pause();
+    }, 500);
+});
+btn5.addEventListener('click', () => {
+
+    let is1ml = sign1.style.marginLeft;
+    if (is1ml != "178px") {
+        window.scrollTo(
+            {
+                top: 0,
+                behavior: "instant"
+            })
+    }
+    audio.play();
+    sign1.style.width = "75px";
+    sign1.style.marginLeft = "178px";
+
+    home.style.display = "none";
+    works.style.display = "none";
+    info.style.display = "block";
+    window.scrollTo(
+        {
+            top: 0,
+            behavior: "smooth"
+        }
+    )
+
+
+});
+
+
+function roc1(x) {
+    x.style.scale = "0.85";
+    x.style.translate = "0px -20px";
+    x.style.transition = "0.5s";
+    setTimeout(() => {
+        x.style.scale = "1";
+        x.style.translate = "20px 0px";
+    }, 300);
+}
+
+w1.addEventListener('click', () => { roc1(w1); });
+w2.addEventListener('click', () => { roc1(w2); });
+w3.addEventListener('click', () => { roc1(w3); });
+
+
+function roc2(x) {
+    x.style.scale = "0.85";
+    x.style.translate = "0px 90px";
+    x.style.transition = "0.5s";
+    setTimeout(() => {
+        x.style.scale = "1";
+        x.style.translate = "20px -180px";
+    }, 200);
+}
+w4.addEventListener('click', () => { roc2(w4); });
+w5.addEventListener('click', () => { roc2(w5); });
+
+
+function roc3(x) {
+    x.style.scale = "1.2";
+    x.style.transition = "0.5s";
+    x.style.translate = "10%";
+
+    setTimeout(() => {
+        x.style.scale = "1";
+        x.style.translate = "0%";
+        setTimeout(() => {
+            x.style.transition = "1s";
+            x.style.backgroundColor = "transparent";
+        }, 2000);
+    }, 200);
+}
+
+
+
+
+
+
+s1.addEventListener('click', () => { roc3(s1); });
+s2.addEventListener('click', () => { roc3(s2); });
+s3.addEventListener('click', () => { roc3(s3); });
+
+
+
+function aov(x) {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                x.style.scale = "0.85";
+                x.style.translate = "0px 0px";
+
+                if (x == w5 || x == w4) {
+                    setTimeout(() => {
+                        x.style.transition = "0.5s";
+                        x.style.opacity = "1";
+                        x.style.translate = "20px -180px";
+                        x.style.scale = "1";
+                        if (x == w5) {
+                            x.style.margin = "-40px 0px";
+                        }
+                    }, 1);
+
+                }
+                else {
+                    setTimeout(() => {
+                        x.style.transition = "0.5s";
+                        x.style.opacity = "1";
+                        x.style.translate = "22.5px 0px";
+                        x.style.scale = "1";
+                    }, 1);
+                }
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+
+    observer.observe(x);
+}
+
+function aovw(x) {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entries.isIntersecting) {
+                audio.play();
+                sign1.style.width = "100px";
+                sign1.style.marginLeft = "86px";
+
+                home.style.display = "flex";
+                works.style.display = "flex";
+                info.style.display = "none";
+
+                window.scrollTo({
+                    top: 600,
+                    behavior: "smooth"
+                });
+            }
+        });
+    }, {
+        threshold: 1
+    });
+    observer.observe(x);
+}
+
+
+aovw(w1);
+aov(w1);
+aov(w2);
+aov(w3);
+aov(w4);
+aov(w5);
+
+function aov2(x) {
+    let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                x.style.transition = "0.5s";
+                x.style.opacity = "1";
+                x.style.scale = "1";
+
+                if (x == s1) {
+                    x.style.marginLeft = "-300px";
+                }
+                else if (x == s2) {
+                    x.style.marginLeft = "40px";
+                }
+                else if (x == s3) {
+                    x.style.marginLeft = "380px";
+                }
+                else if (x == h1) {
+                    x.style.marginLeft = "-350px";
+                }
+            }
+        })
+    }, {
+        threshold: 0.3
+    });
+    observer.observe(x);
+}
+
+
+
+
+
+
+btn15.addEventListener('click', () => {
+    audio.play();
+    sign1.style.width = "95px";
+    sign1.style.marginLeft = "0px";
+    home.style.display = "flex";
+    works.style.display = "flex";
+    info.style.display = "none";
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+function hc(x, y, z, c) {
+    x.style.transition = "0.5s";
+    y.style.transition = "0.5s";
+    z.style.transition = "0.5s";
+
+    x.style.scale = "1.5";
+
+    setTimeout(() => {
+        x.style.scale = "0.4";
+        x.style.translate = "0 -80px";
+
+        y.style.opacity = "1";
+        y.style.fontSize = "45px";
+        y.style.translate = "0 -130px";
+        setTimeout(() => {
+            z.style.opacity = "1";
+        }, 200);
+    }, 100);
+}
+
+function hc2(x, y, z, c) {
+    if (c == 1) {
+        x.style.transition = "0.5s";
+        y.style.transition = "0.5s";
+        z.style.transition = "0.5s";
+
+        x.style.scale = "0.2";
+        setTimeout(() => {
+            x.style.scale = "1";
+            x.style.translate = "0 0px";
+
+            y.style.opacity = "0";
+            z.style.opacity = "0";
+            setTimeout(() => {
+                y.style.fontSize = "30px";
+                y.style.translate = "0 0px";
+            }, 200);
+        }, 100);
+    }
+}
+
+
+h1.addEventListener('click', () => {
+    if (h1c == 0) {
+        h1.style.transition = "0.5s";
+        hc(h1img, txt21, txt22, h1c);
+        h1.style.backgroundColor = "#3c3b3b9b";
+        h1c = 1;
+
+        hc2(h3img, txt25, txt26, h3c);
+        h3.style.backgroundColor = "transparent";
+        h3c = 0;
+
+        hc2(h2img, txt23, txt24, h2c);
+        h2.style.backgroundColor = "transparent";
+        h2c = 0;
+
+
+    }
+    else {
+        hc2(h1img, txt21, txt22, h1c);
+        h1c = 0;
+        h1.style.backgroundColor = "transparent";
+    }
+});
+
+
+h2.addEventListener('click', () => {
+    h2.style.transition = "0.5s";
+    if (h2c == 0) {
+        hc(h2img, txt23, txt24, h2c);
+        h2.style.backgroundColor = "#3c3b3b9b";
+        h2c = 1;
+
+        hc2(h1img, txt21, txt22, h1c);
+        h1c = 0;
+        h1.style.backgroundColor = "transparent";
+
+        hc2(h3img, txt25, txt26, h3c);
+        h3.style.backgroundColor = "transparent";
+        h3c = 0;
+    }
+    else {
+        hc2(h2img, txt23, txt24, h2c);
+        h2.style.backgroundColor = "transparent";
+        h2c = 0;
+
+
+    }
+});
+
+
+h3.addEventListener('click', () => {
+    h3.style.transition = "0.5s";
+    if (h3c == 0) {
+        hc(h3img, txt25, txt26, h3c);
+        h3.style.backgroundColor = "#3c3b3b9b";
+        h3c = 1;
+
+        hc2(h2img, txt23, txt24, h2c);
+        h2.style.backgroundColor = "transparent";
+        h2c = 0;
+
+        hc2(h1img, txt21, txt22, h1c);
+        h1c = 0;
+        h1.style.backgroundColor = "transparent";
+    }
+    else {
+        hc2(h3img, txt25, txt26, h3c);
+        h3.style.backgroundColor = "transparent";
+        h3c = 0;
+    }
+});
+
+
+
+function ccoc(x) {
+    x.style.transition = "0.5s";
+    x.style.backgroundColor = "#3c3b3b9b";
+}
+function rccoc(x) {
+    x.style.transition = "0.5s";
+    x.style.backgroundColor = "transparent";
+}
+
+s1.addEventListener('click', () => {
+    ccoc(s1);
+    rccoc(s2);
+    rccoc(s3);
+});
+s2.addEventListener('click', () => {
+    ccoc(s2);
+    rccoc(s1);
+    rccoc(s3);
+});
+s3.addEventListener('click', () => {
+    ccoc(s3);
+    rccoc(s2);
+    rccoc(s1);
+});
+
+
+function nslm(y) {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sign1.style.width = "100px";
+                sign1.style.marginLeft = "86px";
+
+                home.style.display = "flex";
+                works.style.display = "flex";
+                info.style.display = "none";
+
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(y);
+
+}
+nslm(w1);
+
+function nslm2(y) {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sign1.style.width = "100px";
+                sign1.style.marginLeft = "0px";
+
+                home.style.display = "flex";
+                works.style.display = "flex";
+                info.style.display = "none";
+
+
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(y);
+
+}
+nslm2(btn4);
+
+
+if (sw > 1000) {
+    aov2(s1);
+    aov2(s2);
+    aov2(s3);
+    aov2(h1);
+    aov2(h2);
+    aov2(h3);
+}
+
+function aosfi(x) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                x.style.transition = "0.5s";
+                x.style.opacity = "1";
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+    observer.observe(x);
+}
+
+btn3.addEventListener('click', () => {
+    if (sw < 10000) {
+        aosfi(s1);
+        aosfi(s2);
+        aosfi(s3);
+        aosfi(h1);
+        aosfi(h2);
+        aosfi(h3);
+    }
+})
+
+
+function gtl(x, y) {
+    x.addEventListener('click', () => {
+        window.open(y, '-blank')
+    });
+}
+
+gtl(btn6, "https://github.com/Ankan-Pal");
+gtl(btn7, "https://discord.com/users/1152211104878043148");
+gtl(btn9, "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHGhjFq6kNFMAAAAZPspJ-A513FWjlhQJCnTtOjH8Rtp5na6NSR8iDlyh-9CsHK8giTN4d1FrnY7FjFMhhXuHtL4SS7pzfczymEqdOooLPrhb54ouhJw_g2FeSV5DsK2Hust6M=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fankan-pal-00aa50315%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app");
+gtl(btn8, "https://x.com/ankanpal224");
+gtl(btn10, "https://ankanpaltodolist.netlify.app/");
+gtl(btn11, "https://papaya-puppy-1dc650.netlify.app/");
+gtl(btn12, "https://conunit224.netlify.app/");
+gtl(btn13, "https://ganeshmisti.netlify.app/");
