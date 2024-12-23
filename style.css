@@ -240,7 +240,7 @@ html::-webkit-scrollbar-button {
     background-color: rgba(35, 35, 35, 0.6);
     left: 50%;
     top: 0px;
-    border: 0.5px solid #474747;
+    border: 1px solid #474747;
     transform: translate(-172.5px, 100px);
     transition: all 0.3s smooth;
     opacity: 0.3;
@@ -337,7 +337,7 @@ html::-webkit-scrollbar-button {
     background-color: #23232399;
     left: 50%;
     top: 0px;
-    border: 0.5px solid #474747;
+    border: 1px solid #474747;
     transform: translate(-170px, 1600px);
     opacity: 0.3;
     scale: 0.85;
@@ -389,7 +389,7 @@ html::-webkit-scrollbar-button {
     position: absolute;
     font-size: 18px;
     text-align: center;
-    border: 0.5px solid #474747;
+    border: 1px solid #474747;
     margin: 170px 15px;
 }
 
