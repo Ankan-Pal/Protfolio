@@ -80,25 +80,27 @@ const names = document.getElementById('names');
 
 
 document.addEventListener('mousemove', function (e) {
-  
-const wd = document.getElementById('wd');
-const wc = document.getElementById('wc');
+  const wd = document.querySelector('.wd');
+  const wc = document.querySelector('.wc');
 
-
+  // Update positions for the dot (wd) and circle (wc)
   wd.style.left = `${e.pageX}px`;
-  wc.style.top = `${e.pageY}px`;
+  wd.style.top = `${e.pageY}px`;
 
   wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
 });
 
+// Create the white dot (wd) dynamically
 const wd = document.createElement('div');
 wd.classList.add('wd');
 document.body.appendChild(wd);
 
-const cursorCircle = document.createElement('div');
+// Create the white circle (wc) dynamically
+const wc = document.createElement('div');
 wc.classList.add('wc');
 document.body.appendChild(wc);
+
 
 
 sign1.style.transition = "0.3s";
