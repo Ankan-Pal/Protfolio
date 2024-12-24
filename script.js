@@ -676,7 +676,7 @@ gtl(btn13, "https://ganeshmisti.netlify.app/");
 
 if(sw > 1000 && sw < 1200){
     console.log("1sw");
-                namecard.style.translate = "-250px";
+    namecard.style.marginLeft="-400px";
 }
 
 function namecardani() {
