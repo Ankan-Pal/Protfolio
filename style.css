@@ -7,9 +7,25 @@
     color: #fff;
     inset: 0;
     font-family: roboto;
+    cursor: none;
 
 }
 
+#wc{
+    height:28px;
+    width:28px;
+    border:2px solid #fff;
+    background:none;
+    position:absolute;
+    border-radius:99px;
+}
+#wd{
+    position:absolute;
+    height:5px;
+    width:5px;
+    background:#fff;
+    border-radius:99px;
+}
 
 
 
