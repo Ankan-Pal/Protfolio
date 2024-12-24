@@ -674,7 +674,7 @@ gtl(btn11, "https://papaya-puppy-1dc650.netlify.app/");
 gtl(btn12, "https://conunit224.netlify.app/");
 gtl(btn13, "https://ganeshmisti.netlify.app/");
 
-if(sw > 1000 && sw > 1200){
+if(sw > 1000 && sw < 1200){
     console.log("1sw");
                 namecard.style.translate = "-250px";
 }
