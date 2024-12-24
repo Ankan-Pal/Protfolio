@@ -78,6 +78,10 @@ const logon = document.getElementById('logon');
 const namecard = document.getElementById('namecard');
 const names = document.getElementById('names');
 
+// Disable the default cursor using JavaScript
+document.body.style.cursor = 'none';
+
+
 
 document.addEventListener('mousemove', function (e) {
   const wd = document.querySelector('.wd');
