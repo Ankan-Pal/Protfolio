@@ -7,10 +7,11 @@
     color: #fff;
     inset: 0;
     font-family: roboto;
+  
 }
 /* Hide the default cursor */
 body {
-  cursor: none;
+    cursor: none;
 }
 
 /* Style for the white dot (wd) */
