@@ -91,8 +91,12 @@ document.addEventListener('mousemove', function (e) {
   wd.style.left = `${e.pageX}px`;
   wd.style.top = `${e.pageY}px`;
 
-  wc.style.left = `${e.pageX}px`;
+  setTimeout(()=>{
+      wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
+  },50)
+
+
 });
 
 // Create the white dot (wd) dynamically
