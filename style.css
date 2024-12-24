@@ -891,7 +891,8 @@ html::-webkit-scrollbar-button {
     #logon {
         height: 50px;
         width: 50px;
-        background: url("images/profile.jpg");
+        background-color:red;
+/*         background: url("images/profile.jpg"); */
         background-size: cover;
         border-radius: 90px;
         transition: all 0.5s smooth;
