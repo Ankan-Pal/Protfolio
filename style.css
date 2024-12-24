@@ -13,7 +13,9 @@
 body {
     cursor: none;
 }
-
+button{
+    cursor: none;
+}
 /* Style for the white dot (wd) */
 .wd {
   position: absolute;
