@@ -74,6 +74,10 @@ const txt24 = document.getElementById("txt24");
 const txt25 = document.getElementById("txt25");
 const txt26 = document.getElementById("txt26");
 
+const logon = document.getElementById('logon');
+const namecard = document.getElementById('namecard');
+const names = document.getElementById('names');
+
 
 sign1.style.transition = "0.3s";
 document.body.style.userSelect = 'none';
@@ -669,3 +673,73 @@ gtl(btn10, "https://ankanpaltodolist.netlify.app/");
 gtl(btn11, "https://papaya-puppy-1dc650.netlify.app/");
 gtl(btn12, "https://conunit224.netlify.app/");
 gtl(btn13, "https://ganeshmisti.netlify.app/");
+
+
+
+function namecardani() {
+    setTimeout(() => {
+        names.textContent = "A";
+        setTimeout(() => {
+            names.textContent = "An";
+            setTimeout(() => {
+                names.textContent = "Ank";
+                setTimeout(() => {
+                    names.textContent = "Anka";
+                    setTimeout(() => {
+                        names.textContent = "Ankan";
+                        setTimeout(() => {
+                            names.textContent = "Ankan P";
+                            setTimeout(() => {
+                                names.textContent = "Ankan Pa";
+                                setTimeout(() => {
+                                    names.textContent = "Ankan Pal";
+                                }, 50);
+                            }, 50);
+                        }, 50);
+                    }, 100);
+                }, 50);
+            }, 0);
+        }, 200);
+    }, 600);
+}
+
+function nameoff() {
+    setTimeout(() => {
+        names.textContent = "";
+    }, 500);
+
+}
+
+const state = { IsNamecardON: false };;
+
+function isonoff(state) {
+    if (state.IsNamecardON === false) {
+        namecard.style.transition = "0.5s";
+        logon.style.transition = "0.3s";
+        namecard.style.width = "200px"
+        logon.style.scale = "0.85";
+        logon.style.marginTop = "0.5px";
+
+        namecardani();
+        state.IsNamecardON = true;
+    } else {
+        nameoff();
+        state.IsNamecardON = false;
+        setTimeout(() => {
+            namecard.style.transition = "0.5s";
+            logon.style.transition = "0.3s";
+            namecard.style.width = "50px";
+            logon.style.scale = "1";
+            logon.style.marginTop = "0px";
+        }, 600);
+    }
+}
+
+
+logon.addEventListener('click', () => {
+    namecard.style.transition = "0.5s";
+    logon.style.transition = "0.3s";
+
+    isonoff(state);
+    console.log(`Current state: ${state.IsNamecardON ? "ON" : "OFF"}`);
+});
