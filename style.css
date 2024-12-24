@@ -11,13 +11,7 @@
 }
 
 
-html::-webkit-scrollbar-thumb {
-    background-color: red;
-}
 
-html::-webkit-scrollbar-button {
-    background-color: red;
-}
 
 @keyframes fadeup {
     0% {
@@ -263,7 +257,6 @@ html::-webkit-scrollbar-button {
 #txt4,
 #txt6,
 #txt8 {
-    /* background-color: red; */
     height: max-content;
     width: max-content;
     position: absolute;
@@ -891,8 +884,7 @@ html::-webkit-scrollbar-button {
     #logon {
         height: 50px;
         width: 50px;
-        background-color:red;
-/*         background: url("images/profile.jpg"); */
+        background: url("images/profile.jpg");
         background-size: cover;
         border-radius: 90px;
         transition: all 0.5s smooth;
