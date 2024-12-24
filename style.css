@@ -7,25 +7,35 @@
     color: #fff;
     inset: 0;
     font-family: roboto;
-
-
+}
+/* Hide the default cursor */
+body {
+  cursor: none;
 }
 
-#wc{
-    height:28px;
-    width:28px;
-    border:2px solid #fff;
-    background:none;
-    position:absolute;
-    border-radius:99px;
+/* Style for the white dot (wd) */
+.wd {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
-#wd{
-    position:absolute;
-    height:5px;
-    width:5px;
-    background:#fff;
-    border-radius:99px;
+
+/* Style for the white circle (wc) */
+.wc {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 2px solid white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
 }
+
 
 
 
