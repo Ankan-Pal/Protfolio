@@ -859,6 +859,8 @@ html::-webkit-scrollbar-button {
         top: 1500px;
         font-size: 45px;
     }
+    #namecard,#logon,#names{
+        display:block;}
 
     #namecard {
         height: 50px;
