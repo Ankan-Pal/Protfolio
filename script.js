@@ -102,6 +102,28 @@ let h1c = 0;
 let h2c = 0;
 let h3c = 0;
 
+function wcInfoOn(x,y){
+  x.addEventListener('mouseover', () => {
+    wc.style.transition = 'all 0.3s smooth'; // Smooth transition
+    wc.style.Top="30px;  
+    wc.style.borderRadius = '9px'; // Change border radius to 0px
+    setTimeout(() => {
+     wc.textContent = y;
+    }, 400);
+    });
+}
+
+function wcInfoOff(x){
+   x.addEventListener('mouseout', () => {
+       wc.textContent = "";
+ 
+    setTimeout(() => {
+      wc.style.transition = 'all 0.3s smooth'; // Smooth transition
+    wc.style.Top="30px;  
+    wc.style.borderRadius = '9px'; // Change border radius to 0px
+    }, 100);
+    });
+}
 
 const audio = new Audio('images/se2.mp3');
 let sw = window.innerWidth;
@@ -123,19 +145,8 @@ if(sw > 1000){
       wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
 
-    btn6.addEventListener('mouseover', () => {
-    wc.style.transition = 'all 0.3s smooth'; // Smooth transition
-    wc.style.Top="30px;  
-    wc.style.borderRadius = '9px'; // Change border radius to 0px
-});
-
-// Handle mouseout on btn6
-btn6.addEventListener('mouseout', () => {
-    wc.style.transition = 'all 0.3s smooth'; // Smooth transition
-    wc.style.Top="0px;
-    wc.style.borderRadius = '50%'; // Reset border radius
-});
-  },50)
+    wcInfoOn(btn6,"github");
+    wcInfoOff(btn6);
 });
 }
 else{
