@@ -279,6 +279,7 @@ btn2.addEventListener('click', () => {GoToWorks();});
 btn3.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
 btn4.addEventListener('click', () => {GoToWorks();});
 btn5.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
+btn15.addEventListener('click', () => {GoToHome();});
 
 
 //roc = react on click
@@ -432,18 +433,7 @@ function aov2(x) {
 }
 
 
-btn15.addEventListener('click', () => {
-    audio.play();
-    sign1.style.width = "95px";
-    sign1.style.marginLeft = "0px";
-    home.style.display = "flex";
-    works.style.display = "flex";
-    info.style.display = "none";
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+
 
 
 function hc(x, y, z, c) {
