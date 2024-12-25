@@ -119,8 +119,8 @@ function wcInfoOff(x){
  
     setTimeout(() => {
       wc.style.transition = 'all 0.3s smooth'; // Smooth transition
-    wc.style.Top="30px;  
-    wc.style.borderRadius = '9px'; // Change border radius to 0px
+    wc.style.Top="0px;  
+    wc.style.borderRadius = '50%'; // Change border radius to 0px
     }, 100);
     });
 }
@@ -145,7 +145,8 @@ if(sw > 1000){
       wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
 
-    wcInfoOn(btn6,"github");
+    let g ="github";
+    wcInfoOn(btn6, g);
     wcInfoOff(btn6);
 });
 }
