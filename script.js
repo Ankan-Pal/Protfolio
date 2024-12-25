@@ -403,7 +403,7 @@ aov(w3);
 aov(w4);
 aov(w5);
 
-function aov2(x) {/*
+function aov2(x) {
     let observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -429,13 +429,7 @@ function aov2(x) {/*
         threshold: 0.3
     });
     observer.observe(x);
-    */
-  aler("hey");
 }
-
-
-
-
 
 
 btn15.addEventListener('click', () => {
@@ -666,6 +660,16 @@ function aosfi(x) {
 }
 
 btn3.addEventListener('click', () => {
+    if (sw < 1000) {
+        aosfi(s1);
+        aosfi(s2);
+        aosfi(s3);
+        aosfi(h1);
+        aosfi(h2);
+        aosfi(h3);
+    }
+});
+btn5.addEventListener('click', () => {
     if (sw < 1000) {
         aosfi(s1);
         aosfi(s2);
