@@ -125,15 +125,15 @@ if(sw > 1000){
 
     btn6.addEventListener('mouseover', () => {
     wc.style.transition = 'all 0.3s ease'; // Smooth transition
-    wc.style.transform = 'translateY(100px)'; // Move the circle down by 100px
-    wc.style.borderRadius = '0px'; // Change border radius to 0px
+    wc.style.transform = 'translateY(60px)'; // Move the circle down by 100px
+    wc.style.borderRadius = '9px'; // Change border radius to 0px
 });
 
 // Handle mouseout on btn6
 btn6.addEventListener('mouseout', () => {
     wc.style.transition = 'all 0.3s ease'; // Smooth transition
     wc.style.transform = 'translateY(0)'; // Reset position
-    wc.style.borderRadius = '50%'; // Reset border radius
+    wc.style.borderRadius = '90%'; // Reset border radius
 });
   },50)
 });
