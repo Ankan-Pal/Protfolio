@@ -116,6 +116,14 @@ if(sw > 1000){
   wd.style.left = `${e.pageX}px`;
   wd.style.top = `${e.pageY}px`;
 
+  btn6.addEventListener('mouseover',()=>{
+    let x = event.clientX;
+    let y = event.clientY;
+    let ry = y + 100;
+     wc.style.left = `${x}px`;
+     wc.style.top =`${ry}px`;
+  });
+
   setTimeout(()=>{
       wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
@@ -757,3 +765,5 @@ logon.addEventListener('click', () => {
     isonoff(state);
     console.log(`Current state: ${state.IsNamecardON ? "ON" : "OFF"}`);
 });
+
+
