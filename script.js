@@ -116,13 +116,8 @@ if(sw > 1000){
   wd.style.left = `${e.pageX}px`;
   wd.style.top = `${e.pageY}px`;
 
-  btn6.addEventListener('mouseover',()=>{
-    let x = event.clientX;
-    let y = event.clientY;
-    let ry = y + 100;
-     wc.style.left = `${x}px`;
-     wc.style.top =`${ry}px`;
-  });
+    
+
 
   setTimeout(()=>{
       wc.style.left = `${e.pageX}px`;
@@ -137,6 +132,18 @@ else{
 }
 
 CustomMouseCursor();
+btn6.addEventListener('mouseover', () => {
+    wc.style.transition = 'all 0.3s ease'; // Smooth transition
+    wc.style.transform = 'translateY(100px)'; // Move the circle down by 100px
+    wc.style.borderRadius = '0px'; // Change border radius to 0px
+});
+
+// Handle mouseout on btn6
+btn6.addEventListener('mouseout', () => {
+    wc.style.transition = 'all 0.3s ease'; // Smooth transition
+    wc.style.transform = 'translateY(0)'; // Reset position
+    wc.style.borderRadius = '50%'; // Reset border radius
+});
 
 
 btn4.style.opacity = "0";
