@@ -145,9 +145,9 @@ if(sw > 1000){
       wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
 
-    let g ="github";
-    wcInfoOn(btn6, g);
-    wcInfoOff(btn6);
+    // let g ="github";
+    // wcInfoOn(btn6, g);
+    // wcInfoOff(btn6);
 });
 }
 else{
