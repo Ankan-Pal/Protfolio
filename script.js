@@ -671,7 +671,6 @@ btn3.addEventListener('click', () => {
 });
 btn5.addEventListener('click', () => {
     if (sw < 1000) {
-      aler("r");
         aosfi(s1);
         aosfi(s2);
         aosfi(s3);
