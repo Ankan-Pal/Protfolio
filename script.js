@@ -214,9 +214,10 @@ btn5.addEventListener('click', () => {
 });
 
 
+//go to home tab
 
-btn1.addEventListener('click', () => {
-    audio.play();
+function GoToHome(){
+     audio.play();
     sign1.style.width = "100px";
     sign1.style.marginLeft = "0px";
 
@@ -231,10 +232,11 @@ btn1.addEventListener('click', () => {
     setTimeout(() => {
         audio.pause();
     }, 500);
+}
 
-});
-btn2.addEventListener('click', () => {
-    audio.play();
+// go to works tab
+function GoToWorks(){
+  audio.play();
     sign1.style.width = "100px";
     sign1.style.marginLeft = "86px";
 
@@ -249,11 +251,13 @@ btn2.addEventListener('click', () => {
     setTimeout(() => {
         audio.pause();
     }, 500);
-});
+}
 
-btn3.addEventListener('click', () => {
 
-    let is1ml = sign1.style.marginLeft;
+// if info page was opened before or not
+function CheckIfInfoWasOpenedOrNot(){
+
+   let is1ml = sign1.style.marginLeft;
     if (is1ml != "178px") {
         window.scrollTo(
             {
@@ -274,54 +278,16 @@ btn3.addEventListener('click', () => {
             behavior: "smooth"
         }
     )
+}
+
+btn1.addEventListener('click', () => {GoToHome();});
+btn2.addEventListener('click', () => {GoToWorks();});
+btn3.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
+btn4.addEventListener('click', () => {GoToWorks();});
+btn5.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
 
 
-});
-btn4.addEventListener('click', () => {
-    audio.play();
-    sign1.style.width = "100px";
-    sign1.style.marginLeft = "86px";
-
-    home.style.display = "flex";
-    works.style.display = "flex";
-    info.style.display = "none";
-
-    window.scrollTo({
-        top: 570,
-        behavior: "smooth"
-    });
-    setTimeout(() => {
-        audio.pause();
-    }, 500);
-});
-btn5.addEventListener('click', () => {
-
-    let is1ml = sign1.style.marginLeft;
-    if (is1ml != "178px") {
-        window.scrollTo(
-            {
-                top: 0,
-                behavior: "instant"
-            })
-    }
-    audio.play();
-    sign1.style.width = "75px";
-    sign1.style.marginLeft = "178px";
-
-    home.style.display = "none";
-    works.style.display = "none";
-    info.style.display = "block";
-    window.scrollTo(
-        {
-            top: 0,
-            behavior: "smooth"
-        }
-    )
-
-
-});
-
-
+//roc = react on click
 function roc1(x) {
     x.style.scale = "0.85";
     x.style.translate = "0px -20px";
@@ -364,10 +330,6 @@ function roc3(x) {
         }, 2000);
     }, 200);
 }
-
-
-
-
 
 
 s1.addEventListener('click', () => { roc3(s1); });
