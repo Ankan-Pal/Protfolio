@@ -124,7 +124,10 @@ if(sw > 1000){
 
 });
 }
-
+else{
+  wd.style.display="none";
+    wc.style.display="none";
+}
 
 
 btn4.style.opacity = "0";
