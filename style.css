@@ -237,7 +237,12 @@ button{
 #btn9 {
     background-image: url("images/discord.svg");
 }
-
+#btn6:hover,
+#btn7:hover,
+#btn8:hover,
+#btn9:hover{
+    filter:brightness(80%);
+}
 #txt3 {
     font-size: 25px;
     font-weight: 100;
