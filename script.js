@@ -107,7 +107,6 @@ const audio = new Audio('images/se2.mp3');
 let sw = window.innerWidth;
 
 if(sw > 1000){
-  alert("f");
   document.addEventListener('mousemove', function (e) {
   const wd = document.querySelector('.wd');
   const wc = document.querySelector('.wc');
