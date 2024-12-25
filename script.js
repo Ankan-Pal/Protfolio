@@ -173,7 +173,8 @@ setTimeout(() => {
     }, 300);
 
 }, 400);
-btn3.addEventListener('click', () => {
+
+function InfoTextAni(){
     setTimeout(() => {
         img6.style.transition = "0.3s";
         txt11.style.transition = "0.3s";
@@ -191,27 +192,11 @@ btn3.addEventListener('click', () => {
             }, 200);
         }, 200);
     }, 100);
-});
+}
 
-btn5.addEventListener('click', () => {
-    setTimeout(() => {
-        img6.style.transition = "0.3s";
-        txt11.style.transition = "0.3s";
-        txt12.style.transition = "0.3s";
-        txt13.style.transition = "0.3s";
-        img6.style.opacity = "1";
+btn3.addEventListener('click', () => {InfoTextAni();});
+btn5.addEventListener('click', () => {InfoTextAni();});
 
-        setTimeout(() => {
-            txt11.style.opacity = "1";
-            setTimeout(() => {
-                txt12.style.opacity = "1";
-                setTimeout(() => {
-                    txt13.style.opacity = "1";
-                }, 200);
-            }, 200);
-        }, 200);
-    }, 100);
-});
 
 
 //go to home tab
@@ -670,7 +655,7 @@ function aosfi(x) {
 }
 
 btn3.addEventListener('click', () => {
-    if (sw < 10000) {
+    if (sw < 1000) {
         aosfi(s1);
         aosfi(s2);
         aosfi(s3);
