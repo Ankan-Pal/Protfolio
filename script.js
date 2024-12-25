@@ -101,29 +101,6 @@ document.body.style.userSelect = 'none';
 let h1c = 0;
 let h2c = 0;
 let h3c = 0;
-/*
-function wcInfoOn(x,y){
-  x.addEventListener('mouseover', () => {
-    wc.style.transition = 'all 0.3s smooth'; // Smooth transition
-    wc.style.marginTop="30px;  
-    wc.style.borderRadius = '9px'; // Change border radius to 0px
-    setTimeout(() => {
-     wc.textContent = y;
-    }, 400);
-    });
-}
-
-function wcInfoOff(x){
-   x.addEventListener('mouseout', () => {
-       wc.textContent = "";
- 
-    setTimeout(() => {
-      wc.style.transition = 'all 0.3s smooth'; // Smooth transition
-    wc.style.marginTop="0px;  
-    wc.style.borderRadius = '50%'; // Change border radius to 0px
-    }, 100);
-    });
-}*/
 
 const audio = new Audio('images/se2.mp3');
 let sw = window.innerWidth;
@@ -134,7 +111,7 @@ if(sw > 1000){
   const wd = document.querySelector('.wd');
   const wc = document.querySelector('.wc');
 
-  // Update positions for the dot (wd) and circle (wc)
+
   wd.style.left = `${e.pageX}px`;
   wd.style.top = `${e.pageY}px`;
 
@@ -144,10 +121,6 @@ if(sw > 1000){
   setTimeout(()=>{
       wc.style.left = `${e.pageX}px`;
       wc.style.top = `${e.pageY}px`;
-
-    // let g ="github";
-    // wcInfoOn(btn6, g);
-    // wcInfoOff(btn6);
 });
 }
 else{
