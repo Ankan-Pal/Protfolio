@@ -106,6 +106,7 @@ let h3c = 0;
 const audio = new Audio('images/se2.mp3');
 let sw = window.innerWidth;
 
+function CustomMouseCursor(){  
 if(sw > 1000){
   document.addEventListener('mousemove', function (e) {
   const wd = document.querySelector('.wd');
@@ -119,14 +120,15 @@ if(sw > 1000){
       wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
   },50)
-
-
 });
 }
 else{
   wd.style.display="none";
     wc.style.display="none";
 }
+}
+
+CustomMouseCursor();
 
 
 btn4.style.opacity = "0";
@@ -136,7 +138,9 @@ sign2.style.opacity = "0";
 txt5.style.opacity = "0";
 img6.style.opacity = "0";
 
-setTimeout(() => {
+
+function HomeAni(){
+  setTimeout(() => {
     txt1.style.transition = "0.5s";
     txt2.style.transition = "0.5s";
     btn4.style.transition = "0.5s";
@@ -173,6 +177,11 @@ setTimeout(() => {
     }, 300);
 
 }, 400);
+
+}
+
+HomeAni();
+
 
 function InfoTextAni(){
     setTimeout(() => {
