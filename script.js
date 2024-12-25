@@ -331,7 +331,7 @@ s1.addEventListener('click', () => { roc3(s1); });
 s2.addEventListener('click', () => { roc3(s2); });
 s3.addEventListener('click', () => { roc3(s3); });
 
-
+// aov animation on view
 
 function aov(x) {
 
