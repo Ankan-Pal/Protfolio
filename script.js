@@ -125,14 +125,14 @@ if(sw > 1000){
 
     btn6.addEventListener('mouseover', () => {
     wc.style.transition = 'all 0.3s ease'; // Smooth transition
-    wc.style.transform = 'translateY(60px)'; // Move the circle down by 100px
+    wc.style.marginTop="50px"; // Move the circle down by 100px
     wc.style.borderRadius = '9px'; // Change border radius to 0px
 });
 
 // Handle mouseout on btn6
 btn6.addEventListener('mouseout', () => {
     wc.style.transition = 'all 0.3s ease'; // Smooth transition
-    wc.style.transform = 'translateY(0)'; // Reset position
+    wc.style.marginTop = '0px'; // Reset position
     wc.style.borderRadius = '90%'; // Reset border radius
 });
   },50)
