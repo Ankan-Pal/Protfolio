@@ -122,17 +122,8 @@ if(sw > 1000){
   setTimeout(()=>{
       wc.style.left = `${e.pageX}px`;
   wc.style.top = `${e.pageY}px`;
-  },50)
-});
-}
-else{
-  wd.style.display="none";
-    wc.style.display="none";
-}
-}
 
-CustomMouseCursor();
-btn6.addEventListener('mouseover', () => {
+    btn6.addEventListener('mouseover', () => {
     wc.style.transition = 'all 0.3s ease'; // Smooth transition
     wc.style.transform = 'translateY(100px)'; // Move the circle down by 100px
     wc.style.borderRadius = '0px'; // Change border radius to 0px
@@ -144,6 +135,17 @@ btn6.addEventListener('mouseout', () => {
     wc.style.transform = 'translateY(0)'; // Reset position
     wc.style.borderRadius = '50%'; // Reset border radius
 });
+  },50)
+});
+}
+else{
+  wd.style.display="none";
+    wc.style.display="none";
+}
+}
+
+CustomMouseCursor();
+
 
 
 btn4.style.opacity = "0";
