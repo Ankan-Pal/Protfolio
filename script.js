@@ -125,6 +125,7 @@ if(sw > 1000){
 });
 }
 else{
+  aler("h");
   wd.style.display="none";
     wc.style.display="none";
 }
