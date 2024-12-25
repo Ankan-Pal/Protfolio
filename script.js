@@ -105,7 +105,7 @@ let h3c = 0;
 function wcInfoOn(x,y){
   x.addEventListener('mouseover', () => {
     wc.style.transition = 'all 0.3s smooth'; // Smooth transition
-    wc.style.Top="30px;  
+    wc.style.marginTop="30px;  
     wc.style.borderRadius = '9px'; // Change border radius to 0px
     setTimeout(() => {
      wc.textContent = y;
@@ -119,7 +119,7 @@ function wcInfoOff(x){
  
     setTimeout(() => {
       wc.style.transition = 'all 0.3s smooth'; // Smooth transition
-    wc.style.Top="0px;  
+    wc.style.marginTop="0px;  
     wc.style.borderRadius = '50%'; // Change border radius to 0px
     }, 100);
     });
@@ -143,7 +143,7 @@ if(sw > 1000){
 
   setTimeout(()=>{
       wc.style.left = `${e.pageX}px`;
-  wc.style.top = `${e.pageY}px`;
+      wc.style.top = `${e.pageY}px`;
 
     // let g ="github";
     // wcInfoOn(btn6, g);
