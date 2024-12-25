@@ -102,35 +102,31 @@ let h1c = 0;
 let h2c = 0;
 let h3c = 0;
 
+
 const audio = new Audio('images/se2.mp3');
 let sw = window.innerWidth;
 
-function CustomMouseCursor(){  
 if(sw > 1000){
   document.addEventListener('mousemove', function (e) {
   const wd = document.querySelector('.wd');
   const wc = document.querySelector('.wc');
 
-
+  // Update positions for the dot (wd) and circle (wc)
   wd.style.left = `${e.pageX}px`;
   wd.style.top = `${e.pageY}px`;
 
-    
-
-
   setTimeout(()=>{
       wc.style.left = `${e.pageX}px`;
-      wc.style.top = `${e.pageY}px`;
+  wc.style.top = `${e.pageY}px`;
+  },50)
+
+
 });
 }
 else{
   wd.style.display="none";
     wc.style.display="none";
 }
-}
-
-CustomMouseCursor();
-
 
 
 btn4.style.opacity = "0";
@@ -140,9 +136,7 @@ sign2.style.opacity = "0";
 txt5.style.opacity = "0";
 img6.style.opacity = "0";
 
-
-function HomeAni(){
-  setTimeout(() => {
+setTimeout(() => {
     txt1.style.transition = "0.5s";
     txt2.style.transition = "0.5s";
     btn4.style.transition = "0.5s";
@@ -179,13 +173,7 @@ function HomeAni(){
     }, 300);
 
 }, 400);
-
-}
-
-HomeAni();
-
-
-function InfoTextAni(){
+btn3.addEventListener('click', () => {
     setTimeout(() => {
         img6.style.transition = "0.3s";
         txt11.style.transition = "0.3s";
@@ -203,11 +191,27 @@ function InfoTextAni(){
             }, 200);
         }, 200);
     }, 100);
-}
+});
 
-btn3.addEventListener('click', () => {InfoTextAni();});
-btn5.addEventListener('click', () => {InfoTextAni();});
+btn5.addEventListener('click', () => {
+    setTimeout(() => {
+        img6.style.transition = "0.3s";
+        txt11.style.transition = "0.3s";
+        txt12.style.transition = "0.3s";
+        txt13.style.transition = "0.3s";
+        img6.style.opacity = "1";
 
+        setTimeout(() => {
+            txt11.style.opacity = "1";
+            setTimeout(() => {
+                txt12.style.opacity = "1";
+                setTimeout(() => {
+                    txt13.style.opacity = "1";
+                }, 200);
+            }, 200);
+        }, 200);
+    }, 100);
+});
 
 
 //go to home tab
@@ -281,7 +285,6 @@ btn2.addEventListener('click', () => {GoToWorks();});
 btn3.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
 btn4.addEventListener('click', () => {GoToWorks();});
 btn5.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
-btn15.addEventListener('click', () => {GoToHome();});
 
 
 //roc = react on click
@@ -333,7 +336,7 @@ s1.addEventListener('click', () => { roc3(s1); });
 s2.addEventListener('click', () => { roc3(s2); });
 s3.addEventListener('click', () => { roc3(s3); });
 
-// aov animation on view
+
 
 function aov(x) {
 
@@ -436,6 +439,21 @@ function aov2(x) {
 
 
 
+
+
+
+btn15.addEventListener('click', () => {
+    audio.play();
+    sign1.style.width = "95px";
+    sign1.style.marginLeft = "0px";
+    home.style.display = "flex";
+    works.style.display = "flex";
+    info.style.display = "none";
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 
 
 function hc(x, y, z, c) {
@@ -652,7 +670,7 @@ function aosfi(x) {
 }
 
 btn3.addEventListener('click', () => {
-    if (sw < 1000) {
+    if (sw < 10000) {
         aosfi(s1);
         aosfi(s2);
         aosfi(s3);
@@ -660,17 +678,7 @@ btn3.addEventListener('click', () => {
         aosfi(h2);
         aosfi(h3);
     }
-});
-btn5.addEventListener('click', () => {
-    if (sw < 1000) {
-        aosfi(s1);
-        aosfi(s2);
-        aosfi(s3);
-        aosfi(h1);
-        aosfi(h2);
-        aosfi(h3);
-    }
-});
+})
 
 
 function gtl(x, y) {
@@ -689,6 +697,7 @@ gtl(btn12, "https://conunit224.netlify.app/");
 gtl(btn13, "https://ganeshmisti.netlify.app/");
 
 if(sw > 1000 && sw < 1200){
+    console.log("1sw");
     namecard.style.marginLeft="100px";
 }
 
@@ -759,5 +768,3 @@ logon.addEventListener('click', () => {
     isonoff(state);
     console.log(`Current state: ${state.IsNamecardON ? "ON" : "OFF"}`);
 });
-
-
