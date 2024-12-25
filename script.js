@@ -101,7 +101,7 @@ document.body.style.userSelect = 'none';
 let h1c = 0;
 let h2c = 0;
 let h3c = 0;
-
+/*
 function wcInfoOn(x,y){
   x.addEventListener('mouseover', () => {
     wc.style.transition = 'all 0.3s smooth'; // Smooth transition
@@ -123,7 +123,7 @@ function wcInfoOff(x){
     wc.style.borderRadius = '50%'; // Change border radius to 0px
     }, 100);
     });
-}
+}*/
 
 const audio = new Audio('images/se2.mp3');
 let sw = window.innerWidth;
