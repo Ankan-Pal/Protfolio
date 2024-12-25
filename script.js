@@ -671,6 +671,7 @@ btn3.addEventListener('click', () => {
 });
 btn5.addEventListener('click', () => {
     if (sw < 1000) {
+      aler("r");
         aosfi(s1);
         aosfi(s2);
         aosfi(s3);
@@ -697,7 +698,6 @@ gtl(btn12, "https://conunit224.netlify.app/");
 gtl(btn13, "https://ganeshmisti.netlify.app/");
 
 if(sw > 1000 && sw < 1200){
-    console.log("1sw");
     namecard.style.marginLeft="100px";
 }
 
