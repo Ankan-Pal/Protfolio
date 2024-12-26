@@ -14,6 +14,10 @@ const btn13 = document.getElementById("btn13");
 const btn14 = document.getElementById("btn14");
 const btn15 = document.getElementById("btn15");
 const btn16 = document.getElementById("btn16");
+const btn17 = document.getElementById("btn17");
+const btn18 = document.getElementById("btn18");
+const btn19 = document.getElementById("btn19");
+const btn20 = document.getElementById("btn20");
 
 const sign1 = document.getElementById("sign1");
 const sign2 = document.getElementById("sign2");
@@ -56,6 +60,8 @@ const w3 = document.getElementById("w3");
 const w4 = document.getElementById("w4");
 const w5 = document.getElementById("w5");
 
+
+
 const h1 = document.getElementById("h1");
 const h2 = document.getElementById("h2");
 const h3 = document.getElementById("h3");
@@ -78,6 +84,8 @@ const logon = document.getElementById('logon');
 const namecard = document.getElementById('namecard');
 const names = document.getElementById('names');
 
+const cmenu = document.getElementById("cmenu");
+
 // Disable the default cursor using JavaScript
 document.body.style.cursor = 'none';
 
@@ -93,6 +101,10 @@ const wc = document.createElement('div');
 wc.classList.add('wc');
 document.body.appendChild(wc);
 
+function transiton(x, y) {
+    x.style.transition = y;
+}
+
 
 
 sign1.style.transition = "0.3s";
@@ -106,26 +118,131 @@ let h3c = 0;
 const audio = new Audio('images/se2.mp3');
 let sw = window.innerWidth;
 
-if(sw > 1000){
-  document.addEventListener('mousemove', function (e) {
-  const wd = document.querySelector('.wd');
-  const wc = document.querySelector('.wc');
 
-  // Update positions for the dot (wd) and circle (wc)
-  wd.style.left = `${e.pageX}px`;
-  wd.style.top = `${e.pageY}px`;
-
-  setTimeout(()=>{
-      wc.style.left = `${e.pageX}px`;
-  wc.style.top = `${e.pageY}px`;
-  },50)
+function contextMenuShow() {
+    document.addEventListener('contextmenu', (e) => {
 
 
-});
+        e.preventDefault();
+
+
+        cmenu.style.left = `${e.pageX}px`;
+        cmenu.style.top = `${e.pageY}px`;
+
+        setTimeout(() => {
+            transiton(cmenu, '0.1s');
+            cmenu.style.opacity = "1";
+            cmenu.style.height = "145px";
+
+            setTimeout(() => {
+                btn16.style.opacity = "1";
+
+                btn17.style.opacity = "1";
+
+                btn18.style.opacity = "1";
+
+                btn19.style.opacity = "1";
+            }, 250);
+        }, 20);
+
+        set
+    });
+
+    // Hide the custom menu on any click
+    document.addEventListener('click', () => {
+        cmenu.style.opacity = "0";
+    });
 }
-else{
-  wd.style.display="none";
-    wc.style.display="none";
+
+btn16.addEventListener('click', () => {
+    location.reload();
+});
+btn17.addEventListener('click', () => {
+    navigator.clipboard.writeText('https://ankanpal.netlify.app/')
+});
+btn18.addEventListener('click', () => {
+
+    const content = {
+        title: 'Hello World Share',
+        text: 'Check out this cool message: Hello World!',
+        url: window.location.href
+    }
+    navigator.share(content)
+});
+btn19.addEventListener('click', () => {
+    GoToHome();
+});
+
+
+contextMenuShow();
+
+function dynamicBar(x, y) {
+    x.addEventListener('mouseover', () => {
+
+        wc.style.transition = 'all 0.3s ease';
+        wc.style.transform = 'translate(-50%, 50px)';
+        wc.style.border = "1px solid #474747";
+        wc.style.backdropFilter = "blur(10px)";
+        wc.style.borderRadius = '9px';
+        wc.style.width = "max-content";
+        wc.style.paddingLeft = "10px";
+        wc.style.paddingRight = "10px";
+        wc.style.height = "max-content";
+        wc.style.background = "#3d383800";
+        wc.textContent = y;
+    });
+
+    // Handle mouseout on btn6
+    x.addEventListener('mouseout', () => {
+        wc.style.transition = 'all 0.1s ease';
+        wc.style.transform = 'translate(-50%, -50%)';
+        wc.style.borderRadius = '50%';
+        wc.style.border = "2px solid #fff";
+        wc.style.height = "45px";
+        wc.style.width = "45px";
+        wc.style.borderRadius = '50%';
+        wc.style.backdropFilter = "blur(0px)";
+        wc.style.background = "transparent";
+        wc.style.paddingLeft = "0px";
+        wc.style.paddingRight = "0px";
+        wc.textContent = "";
+
+        setTimeout(() => {
+            wc.style.transition = 'all 0.01s ease';
+        }, 300);
+    });
+
+}
+
+if (sw > 1000) {
+
+    document.addEventListener('mousemove', function (e) {
+        const wd = document.querySelector('.wd');
+        const wc = document.querySelector('.wc');
+
+        // Update positions for the dot (wd) and circle (wc)
+        wd.style.left = `${e.pageX}px`;
+        wd.style.top = `${e.pageY}px`;
+
+        // wc.classList.add('wcdyna');
+        // wc.textContent="Loading";
+
+
+
+        wc.style.left = `${e.pageX}px`;
+        wc.style.top = `${e.pageY}px`;
+
+        dynamicBar(btn6, "Github");
+        dynamicBar(btn9, "Discord");
+        dynamicBar(btn7, "X");
+        dynamicBar(btn8, "LinkledIn");
+
+
+    });
+}
+else {
+    wd.style.display = "none";
+    wc.style.display = "none";
 }
 
 
@@ -137,20 +254,40 @@ txt5.style.opacity = "0";
 img6.style.opacity = "0";
 
 setTimeout(() => {
-    txt1.style.transition = "0.5s";
-    txt2.style.transition = "0.5s";
-    btn4.style.transition = "0.5s";
-    btn5.style.transition = "0.5s";
-    txt3.style.transition = "0.5s";
-    sign2.style.transition = "0.5s";
-    txt11.style.transition = "0.5s";
-    txt12.style.transition = "0.5s";
-    txt13.style.transition = "0.5s";
+    transiton(txt1, "0.5s");
+    transiton(txt2, "0.5s");
+    transiton(btn4, "0.5s");
+    transiton(btn5, "0.5s");
+    transiton(txt3, "0.5s");
+    transiton(sign2, "0.5s");
+    transiton(txt11, "0.5s");
+    transiton(txt12, "0.5s");
+    transiton(txt13, "0.5s");
 
+    if (sw > 1200) {
+        txt2.style.marginTop = "10px";
+        btn4.style.marginTop = "-20px";
+        btn5.style.marginTop = "0px";
+        transiton(txt1, "0.3s");
+        txt1.textContent = null;
+        txt1.style.width = "1px";
+        txt1.style.height = "90px";
+        txt1.style.color = "#a0a0a0";
+        setTimeout(() => {
+            txt1.style.opacity = "1";
+            txt1.style.width = "365px";
+            setTimeout(() => {
+                transiton(txt1, "0.3s");
+                txt1.style.color = "#000";
+                txt1.textContent = "-Ankan Pal-";
+            }, 500);
+        }, 100);
+    }
     txt1.style.opacity = "1";
+
+
     setTimeout(() => {
         txt2.style.opacity = "1";
-
         setTimeout(() => {
             btn4.style.opacity = "1";
             btn5.style.opacity = "1";
@@ -214,10 +351,11 @@ btn5.addEventListener('click', () => {
 });
 
 
+
 //go to home tab
 
-function GoToHome(){
-     audio.play();
+function GoToHome() {
+    audio.play();
     sign1.style.width = "100px";
     sign1.style.marginLeft = "0px";
 
@@ -230,13 +368,13 @@ function GoToHome(){
         behavior: "smooth"
     });
     setTimeout(() => {
-        audio.pause();
+        audio.stop();
     }, 500);
 }
 
 // go to works tab
-function GoToWorks(){
-  audio.play();
+function GoToWorks() {
+    audio.play();
     sign1.style.width = "100px";
     sign1.style.marginLeft = "86px";
 
@@ -255,9 +393,9 @@ function GoToWorks(){
 
 
 // if info page was opened before or not
-function CheckIfInfoWasOpenedOrNot(){
+function CheckIfInfoWasOpenedOrNot() {
 
-   let is1ml = sign1.style.marginLeft;
+    let is1ml = sign1.style.marginLeft;
     if (is1ml != "178px") {
         window.scrollTo(
             {
@@ -280,11 +418,11 @@ function CheckIfInfoWasOpenedOrNot(){
     )
 }
 
-btn1.addEventListener('click', () => {GoToHome();});
-btn2.addEventListener('click', () => {GoToWorks();});
-btn3.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
-btn4.addEventListener('click', () => {GoToWorks();});
-btn5.addEventListener('click', () => {CheckIfInfoWasOpenedOrNot();});
+btn1.addEventListener('click', () => { GoToHome(); });
+btn2.addEventListener('click', () => { GoToWorks(); });
+btn3.addEventListener('click', () => { CheckIfInfoWasOpenedOrNot(); });
+btn4.addEventListener('click', () => { GoToWorks(); });
+btn5.addEventListener('click', () => { CheckIfInfoWasOpenedOrNot(); });
 
 
 //roc = react on click
@@ -513,6 +651,12 @@ h1.addEventListener('click', () => {
         h2.style.backgroundColor = "transparent";
         h2c = 0;
 
+        setTimeout(() => {
+            hc2(h1img, txt21, txt22, h1c);
+            h1c = 0;
+            h1.style.backgroundColor = "transparent";
+        }, 4000);
+
 
     }
     else {
@@ -537,11 +681,18 @@ h2.addEventListener('click', () => {
         hc2(h3img, txt25, txt26, h3c);
         h3.style.backgroundColor = "transparent";
         h3c = 0;
+
+        setTimeout(() => {
+            hc2(h2img, txt23, txt24, h2c);
+            h2.style.backgroundColor = "transparent";
+            h2c = 0;
+        }, 4000);
     }
     else {
         hc2(h2img, txt23, txt24, h2c);
         h2.style.backgroundColor = "transparent";
         h2c = 0;
+
 
 
     }
@@ -562,6 +713,11 @@ h3.addEventListener('click', () => {
         hc2(h1img, txt21, txt22, h1c);
         h1c = 0;
         h1.style.backgroundColor = "transparent";
+        setTimeout(() => {
+            hc2(h3img, txt25, txt26, h3c);
+            h3.style.backgroundColor = "transparent";
+            h3c = 0;
+        }, 4000);
     }
     else {
         hc2(h3img, txt25, txt26, h3c);
@@ -696,42 +852,23 @@ gtl(btn11, "https://papaya-puppy-1dc650.netlify.app/");
 gtl(btn12, "https://conunit224.netlify.app/");
 gtl(btn13, "https://ganeshmisti.netlify.app/");
 
-if(sw > 1000 && sw < 1200){
+if (sw > 1000 && sw < 1200) {
     console.log("1sw");
-    namecard.style.marginLeft="100px";
+    namecard.style.marginLeft = "100px";
 }
 
 function namecardani() {
     setTimeout(() => {
-        names.textContent = "A";
-        setTimeout(() => {
-            names.textContent = "An";
-            setTimeout(() => {
-                names.textContent = "Ank";
-                setTimeout(() => {
-                    names.textContent = "Anka";
-                    setTimeout(() => {
-                        names.textContent = "Ankan";
-                        setTimeout(() => {
-                            names.textContent = "Ankan P";
-                            setTimeout(() => {
-                                names.textContent = "Ankan Pa";
-                                setTimeout(() => {
-                                    names.textContent = "Ankan Pal";
-                                }, 50);
-                            }, 50);
-                        }, 50);
-                    }, 100);
-                }, 50);
-            }, 0);
-        }, 200);
+        transiton(names, '0.5s');
+        names.style.color = "#fff";
     }, 600);
 }
 
 function nameoff() {
     setTimeout(() => {
-        names.textContent = "";
-    }, 500);
+        transiton(names, '0.05s');
+        names.style.color = "transparent";
+    }, 50);
 
 }
 
@@ -744,6 +881,8 @@ function isonoff(state) {
         namecard.style.width = "200px"
         logon.style.scale = "0.85";
         logon.style.marginTop = "0.5px";
+        names.textContent = "Ankan Pal";
+        names.style.color = "transparent";
 
         namecardani();
         state.IsNamecardON = true;
@@ -768,3 +907,5 @@ logon.addEventListener('click', () => {
     isonoff(state);
     console.log(`Current state: ${state.IsNamecardON ? "ON" : "OFF"}`);
 });
+
+
