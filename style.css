@@ -3,46 +3,199 @@
 
 
 * {
-    /* font-family:'Courier New', Courier, monospace; */
     color: #fff;
     inset: 0;
     font-family: roboto;
-  
+
 }
+
 /* Hide the default cursor */
 body {
     cursor: none;
 }
-button{
+
+button {
     cursor: none;
 }
+
+/* contextmenu */
+
+#cmenu {
+    position: absolute;
+    height: 155px;
+    width: 110px;
+    background-color: #47474754;
+    border-radius: 9px;
+    opacity: 0;
+    z-index: 3;
+    backdrop-filter: blur(15px);
+    border: 1px solid #474747;
+    transition: 0.3s smooth;
+    filter: drop-shadow(0px 0px 5px #47474750);
+}
+
+#cmenu button:hover {
+    transition: all 0.3s smooth;
+    background-color: #777777ae;
+
+}
+
+.cmenubtn {
+    opacity: 0;
+}
+
+#btn16,
+#btn17,
+#btn18,
+#btn19 {
+    font-size: 17px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    position: absolute;
+    left: 5px;
+    padding: 0;
+    top: 5px;
+    background-color: transparent;
+    transition: all 0.3s smooth;
+}
+
+#btn17 {
+    top: 40px;
+}
+
+#btn18 {
+    top: 75px;
+}
+
+#btn19 {
+    top: 110px;
+}
+
+
+.cbtnp {
+    height: max-content;
+    width: max-content;
+    inset: 0;
+    margin: -2px 40px;
+    font-weight: 300;
+}
+
+#cimg1,
+#cimg2,
+#cimg3,
+#cimg4,
+#cimg5 {
+    height: 25px;
+    width: 25px;
+    border-radius: 0px;
+    background-image: url("images/refresh.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+
+#cimg1 {
+    color: white;
+    fill: #fff;
+}
+
+#cimg2 {
+    background-image: url("images/copy.png");
+}
+
+#cimg3 {
+    background-image: url("images/share.svg");
+}
+
+#cimg4 {
+    background-image: url("images/back.png");
+}
+
+
 /* Style for the white dot (wd) */
 .wd {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-    z-index:4;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 4;
 }
 
 /* Style for the white circle (wc) */
 .wc {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  border: 2px solid white;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-  z-index:4;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    z-index: 4;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'roboto slab';
+    font-weight: 100;
+}
+
+.wcdyna {
+    position: fixed;
+    height: max-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 220px;
+    /* padding-left: 20px; */
+    font-family: roboto;
+    font-weight: 300;
+    border-radius: 90px;
+    border: 2px solid #474747;
+    /* border: none; */
+    background-color: #464545e3;
+    opacity: 0.9;
+
+    text-align: center;
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    transform: translate(-110px, 0px);
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 0px 15px #383838ae;
 }
 
 
+@keyframes spin {
+    0% {
 
+        transform: translate(-125px, -22.5px) rotate(0deg);
+    }
+
+    45% {
+
+        transform: translate(-125px, -22.5px) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(-125px, -22.5px) rotate(180deg);
+    }
+
+    75% {
+
+        transform: translate(-125px, -22.5px) rotate(270deg);
+    }
+
+    100% {
+        transform: translate(-125px, -22.5px) rotate(360deg);
+    }
+}
 
 @keyframes fadeup {
     0% {
@@ -68,19 +221,20 @@ button{
     }
 }
 
-#namecard,#logon,#names{
-    display:none;}
+#namecard,
+#logon,
+#names {
+    display: none;
+}
 
 #nav {
     height: 50px;
     width: 270px;
-    /* background: #1d1d1d3c; */
     background: linear-gradient(to bottom right, #3c3b3b9b, #4645453c);
 
     border-radius: 90px;
     padding-top: 5px;
     padding-bottom: 5px;
-    /* border: 1px solid #7676768c; */
     border: 0.5px solid #69636379;
     display: flex;
     align-items: center;
@@ -112,8 +266,7 @@ button{
     position: fixed;
     z-index: 2;
     border-radius: 90px;
-    /* border: 1px solid #7676768c; */
-    /* margin: 3px 5px; */
+
     left: 8px;
     top: 8px;
     transition: all 0.3s smooth;
@@ -124,9 +277,7 @@ button{
     width: 100vw;
     position: absolute;
     inset: 0;
-    /* background: linear-gradient(to bottom right, rgb(46, 45, 45), #2a2a2a); */
-    /* background: #171717; */
-    /* background: url("images/bg.jpg"); */
+
     background: linear-gradient(to bottom, #2e2e2e, #141414);
     background-repeat: no-repeat;
     background-size: cover;
@@ -143,12 +294,10 @@ button{
 #txt1 {
     font-size: 65px;
     font-weight: 100;
-    /* text-shadow: 0px 0px 13px lightgray; */
     transform: translate(0px, -60px);
-    /* text-shadow: 0px 0px 20px #f2f2f2; */
     font-family: 'roboto slab';
-    animation: fadeup 0.6s 1 ease-out;
     opacity: 0;
+    color: #fff;
 }
 
 #txt2 {
@@ -159,7 +308,6 @@ button{
     width: 300px;
     text-align: left;
     font-family: roboto slab;
-    animation: fadeup 0.6s 0.4s 1 ease-out;
     opacity: 0;
 }
 
@@ -167,7 +315,6 @@ button{
 #btn5 {
     color: #ffffff;
     background-color: #3d383800;
-    /* background-color: transparent; */
     border: 0.5px solid #7c797996;
     font-size: 27px;
     backdrop-filter: blur(5px);
@@ -192,11 +339,10 @@ button{
 
 #sign2 {
     color: #fff;
-    /* background-color: #212020bf; */
-    /* border: 1px solid #474747; */
+
     font-size: 37px;
     opacity: 0.75;
-    /* backdrop-filter: blur(100px); */
+
     font-weight: 100;
     z-index: 1;
     border-radius: 19px;
@@ -237,12 +383,14 @@ button{
 #btn9 {
     background-image: url("images/discord.svg");
 }
+
 #btn6:hover,
 #btn7:hover,
 #btn8:hover,
-#btn9:hover{
-    filter:brightness(80%);
+#btn9:hover {
+    filter: brightness(80%);
 }
+
 #txt3 {
     font-size: 25px;
     font-weight: 100;
@@ -321,7 +469,7 @@ button{
     background: #2e2e2e;
     border: 0.5px solid #474747;
     margin: 260px 25px;
-    z-index:2;
+    z-index: 2;
 }
 
 #img1,
@@ -334,7 +482,6 @@ button{
     background-color: #3d383800;
     border: 0.5px solid #474747;
     border-radius: 25px;
-    /* box-shadow: 0px 0px 10px #47474745; */
 }
 
 #img1 {
@@ -459,18 +606,44 @@ button{
 }
 
 #img6 {
-    height: 225px;
-    width: 225px;
+    height: 205px;
+    width: 205px;
     border-radius: 202px;
     position: absolute;
     left: 50%;
-    transform: translateX(-116.5px);
-    background: url("images/profile.jpg");
+    transform: translateX(-102.5px);
+    background: url("images/profile-pic.png");
     background-size: cover;
-    margin: 110px 0px;
-    border: 8px solid #2e2e2e;
+    margin: 120px 0px;
+    /* border: 8px solid #2e2e2e; */
     transition: all 0.5s smooth;
     opacity: 0;
+}
+
+#bani {
+    height: 248px;
+    width: 248px;
+
+    background-color: transparent;
+    border: 2px solid #474747;
+    transform: translate(-125px, -22.5px) rotate(0deg);
+    z-index: 2;
+    border-radius: 900px;
+    left: 50%;
+    position: absolute;
+    margin: 120px 0px;
+    top: 0;
+    animation: spin 5s infinite;
+}
+
+#banib {
+    height: 30px;
+    width: 30px;
+    border-radius: 90px;
+    position: absolute;
+    background-color: #f2f2f2;
+    margin: 45px 0px;
+
 }
 
 #txt11 {
@@ -553,7 +726,7 @@ button{
 #simgimg {
     width: 200px;
     height: 200px;
-    background: url("images/profile.jpg");
+    background: url("images/profile-pic.png");
     background-size: cover;
     border-radius: 900px;
     position: fixed;
@@ -687,12 +860,20 @@ button{
 
     #txt1,
     #txt2 {
-        animation: fadeup2 0.6s 1 ease-out;
-        transform: translate(-210px, -40px);
+        background-color: #a0a0a0;
+        border-radius: 9px;
+        padding-left: 30px;
+        color: #000;
+        padding-right: 30px;
+        /* animation: fadeup 0.6s 1 ease-out; */
+        /* transform: translate(-210px, -40px); */
     }
 
     #txt2 {
-        animation: fadeup2 0.6s 0.5s 1 ease-out;
+        color: #fff;
+        background-color: transparent;
+        padding: 0;
+        /* animation: fadeup 0.6s 0.5s 1 ease-out; */
     }
 
     #btn4,
@@ -700,20 +881,24 @@ button{
         font-size: 25px;
         height: 50px;
         width: 140px;
-        transform: translate(-290px, -20px);
+        /* transform: translate(-290px, -20px); */
     }
 
     #btn5 {
-        transform: translate(-130px, -72px);
+        /* transform: translate(-130px, -72px); */
     }
 
     #sign2 {
-        transform: translate(200px, -200px);
+        position: absolute;
+        left: 50%;
+        transform: translate(-130px, 420px);
+        /* transform: translate(200px, -200px); */
     }
 
     #txt3 {
+        display: none;
         font-size: 30px;
-        transform: translate(200px, -200px);
+        /* transform: translate(200px, -200px); */
     }
 
     #sign3 {
@@ -730,7 +915,7 @@ button{
     }
 
     #txt5 {
-        background-color: rgba(160, 160, 160, 1);
+        background-color: #a0a0a0;
         color: #000;
         font-weight: 100;
         height: max-content;
@@ -889,18 +1074,20 @@ button{
         top: 1500px;
         font-size: 45px;
     }
-    #namecard,#logon,#names{
-        display:block;}
+
+    #namecard,
+    #logon,
+    #names {
+        display: block;
+    }
 
     #namecard {
         height: 50px;
         width: 50px;
-        /* background: #1d1d1d3c; */
         background: linear-gradient(to bottom right, #3c3b3b9b, #4645453c);
 
         border-radius: 90px;
         padding: 5px;
-        /* border: 1px solid #7676768c; */
         border: 0.5px solid #69636379;
         display: flex;
         align-items: center;
@@ -914,14 +1101,14 @@ button{
         z-index: 2;
         backdrop-filter: blur(10px);
         box-shadow: 0px 0px 15px #383838ae;
-        transition: all 0.5s smooth;
+        transition: all 0s smooth;
         z-index: 3;
     }
 
     #logon {
         height: 50px;
         width: 50px;
-        background: url("images/profile.jpg");
+        background: url("images/profile-pic.png");
         background-size: cover;
         border-radius: 90px;
         transition: all 0.5s smooth;
