@@ -152,6 +152,9 @@ function contextMenuShow() {
     document.addEventListener('click', () => {
         cmenu.style.opacity = "0";
     });
+    document.addEventListener('scroll', () => {
+        cmenu.style.opacity = "0";
+    });
 }
 
 btn16.addEventListener('click', () => {
