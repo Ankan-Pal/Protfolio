@@ -834,7 +834,20 @@ btn3.addEventListener('click', () => {
         aosfi(h2);
         aosfi(h3);
     }
-})
+});
+
+
+btn5.addEventListener('click', () => {
+    if (sw < 1000) {
+        aler("d");
+        aosfi(s1);
+        aosfi(s2);
+        aosfi(s3);
+        aosfi(h1);
+        aosfi(h2);
+        aosfi(h3);
+    }
+});
 
 
 function gtl(x, y) {
@@ -853,7 +866,7 @@ gtl(btn12, "https://conunit224.netlify.app/");
 gtl(btn13, "https://ganeshmisti.netlify.app/");
 
 if (sw > 1000 && sw < 1200) {
-    console.log("1sw");
+
     namecard.style.marginLeft = "100px";
 }
 
