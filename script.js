@@ -163,8 +163,8 @@ btn17.addEventListener('click', () => {
 btn18.addEventListener('click', () => {
 
     const content = {
-        title: 'Hello World Share',
-        text: 'Check out this cool message: Hello World!',
+        title: 'Ankan/Profolio',
+        text: 'Check out my protfolio',
         url: window.location.href
     }
     navigator.share(content)
