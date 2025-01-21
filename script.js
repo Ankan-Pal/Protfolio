@@ -826,7 +826,7 @@ function aosfi(x) {
 }
 
 btn3.addEventListener('click', () => {
-    if (sw < 10000) {
+    if (sw < 1000) {
         aosfi(s1);
         aosfi(s2);
         aosfi(s3);
