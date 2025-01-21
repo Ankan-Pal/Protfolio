@@ -453,13 +453,13 @@ button {
     position: absolute;
     width: max-content;
     margin: -34px auto;
-    font-size: 40px;
+
     font-family: roboto slab;
     height: max-content;
     transition: all 0.5s smooth;
     background-color: #a0a0a0;
-        color: #000;
-        font-weight: 100;
+    color: #000;
+    font-weight: 100;
 }
 
 #btn10,
