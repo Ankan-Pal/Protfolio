@@ -836,8 +836,6 @@ btn3.addEventListener('click', () => {
         aosfi(h3);
     }
 });
-
-
 btn5.addEventListener('click', () => {
     if (sw < 1000) {
         alert("d");
@@ -849,6 +847,8 @@ btn5.addEventListener('click', () => {
         aosfi(h3);
     }
 });
+
+
 
 
 function gtl(x, y) {
